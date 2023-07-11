@@ -24,6 +24,6 @@ resource "aws_instance" "test_server" {
   key_name      = "mykey"
 
   tags = {
-    Name = terraform-test
+    Name = terraform
   }
 }
