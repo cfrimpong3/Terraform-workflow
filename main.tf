@@ -15,13 +15,13 @@ data "aws_ami" "ubuntu" {
 }
 
 provider "aws" {
-  region  = "us-east-2"
+  region  = "us-east-1"
 }
 
-resource "aws_instance" "app_server" {
+resource "aws_instance" "test_server" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
-  key_name      = "app-ssh-key"
+  instance_type = "t2.micro"
+  key_name      = "mykey"
 
   tags = {
     Name = var.ec2_name
