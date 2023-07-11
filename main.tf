@@ -24,6 +24,6 @@ resource "aws_instance" "test_server" {
   key_name      = "mykey"
 
   tags = {
-    Name = var.ec2_name
+    Name = terraform-test
   }
 }
